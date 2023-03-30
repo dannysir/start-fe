@@ -115,7 +115,6 @@
 
 // let newArr = [];
 
-// items.splice(0, pageSize);
 // while (items.length != 0) {
 //   newArr.push(items.splice(0, pageSize));
 // }
