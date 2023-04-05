@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8" />
+    <title>source</title>
+  </head>
+  <body>
+    <div id="board">
+      <!-- <div>
+        <span class="black">1</span>
+        <span class="white">0</span>
+        <span class="black">1</span>
+        <span class="white">0</span>
+      </div>
+      <div>
+        <span class="white">1</span>
+        <span class="black">0</span>
+        <span class="white">1</span>
+        <span class="black">0</span>
+      </div>
+      <div>
+        <span class="black">1</span>
+        <span class="white">0</span>
+        <span class="black">1</span>
+        <span class="white">0</span>
+      </div>
+      <div>
+        <span class="white">1</span>
+        <span class="black">0</span>
+        <span class="white">1</span>
+        <span class="black">0</span>
+      </div> -->
+    </div>
+    <script>
+      var board = document.getElementById("board");
+      for (var i = 0; i < 4; i++) {
+        const wrapper = document.createElement("div");
+        wrapper.id = "wrapper";
+        for (var j = 0; j < 4; j++) {
+          // TODO : 여기에 필요한 코드를 작성해주세요.
+          if (j % 2 == 0 && i % 2 == 0) {
+            const white = document.createElement("span");
+            white.className = "white";
+            white.style.backgroundColor = "white";
+            wrapper.appendChild(white);
+            //white.innerText = "1";
+            white.style.width = "100px";
+            white.style.height = "100px";
+            white.style.display = "inline-block";
+          } else if (j % 2 == 1 && i % 2 == 0) {
+            const black = document.createElement("span");
+            black.className = "black";
+            black.style.backgroundColor = "black";
+            wrapper.appendChild(black);
+            //black.innerText = "1";
+            black.style.width = "100px";
+            black.style.height = "100px";
+            black.style.display = "inline-block";
+          } else if (j % 2 == 0 && i % 2 == 1) {
+            const black = document.createElement("span");
+            black.className = "black";
+            black.style.backgroundColor = "black";
+            wrapper.appendChild(black);
+            //black.innerText = "1";
+            black.style.width = "100px";
+            black.style.height = "100px";
+            black.style.display = "inline-block";
+          } else if (j % 2 == 1 && i % 2 == 1) {
+            const white = document.createElement("span");
+            white.className = "white";
+            white.style.backgroundColor = "white";
+            wrapper.appendChild(white);
+            // white.innerText = "1";
+            white.style.width = "100px";
+            white.style.height = "100px";
+            white.style.display = "inline-block";
+          }
+        }
+        board.appendChild(wrapper);
+      }
+      board.style.border = "gray solid 4px";
+      board.style.display = "inline-block";
+      // const onClick = (item) => {
+      //   if (item.style.backgroundColor != "red") {
+      //     item.style.backgroundColor = "red";
+      //   } else {
+      //     if (item.className == "white") {
+      //       item.style.backgroundColor = "white";
+      //     } else if (item.className == "black") {
+      //       item.style.backgroundColor = "black";
+      //     }
+      //   }
+      // };
+      const checkBoard = document.querySelectorAll("#board div span");
+      checkBoard.forEach((a) => {
+        a.addEventListener("click", () => {
+          if (a.style.backgroundColor != "red") {
+            a.style.backgroundColor = "red";
+          } else {
+            if (a.className == "white") {
+              a.style.backgroundColor = "white";
+            } else if (a.className == "black") {
+              a.style.backgroundColor = "black";
+            }
+          }
+        });
+      });
+    </script>
+  </body>
+</html>
