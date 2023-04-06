@@ -46,7 +46,7 @@
             //white.innerText = "1";
             white.style.width = "100px";
             white.style.height = "100px";
-            white.style.display = "inline-block";
+            white.style.display = "flex";
           } else if (j % 2 == 1 && i % 2 == 0) {
             const black = document.createElement("span");
             black.className = "black";
@@ -55,7 +55,7 @@
             //black.innerText = "1";
             black.style.width = "100px";
             black.style.height = "100px";
-            black.style.display = "inline-block";
+            black.style.display = "flex";
           } else if (j % 2 == 0 && i % 2 == 1) {
             const black = document.createElement("span");
             black.className = "black";
@@ -64,7 +64,7 @@
             //black.innerText = "1";
             black.style.width = "100px";
             black.style.height = "100px";
-            black.style.display = "inline-block";
+            black.style.display = "flex";
           } else if (j % 2 == 1 && i % 2 == 1) {
             const white = document.createElement("span");
             white.className = "white";
@@ -73,13 +73,14 @@
             // white.innerText = "1";
             white.style.width = "100px";
             white.style.height = "100px";
-            white.style.display = "inline-block";
+            white.style.display = "flex";
           }
         }
         board.appendChild(wrapper);
       }
       board.style.border = "gray solid 4px";
-      board.style.display = "inline-block";
+      board.style.display = "flex";
+      board.style.width = "400px";
       // const onClick = (item) => {
       //   if (item.style.backgroundColor != "red") {
       //     item.style.backgroundColor = "red";
