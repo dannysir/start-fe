@@ -1,3 +1,4 @@
+/* eslint-disable no-console */
 /* eslint-disable no-restricted-syntax */
 /* eslint-disable arrow-body-style */
 /* eslint-disable import/no-extraneous-dependencies */
